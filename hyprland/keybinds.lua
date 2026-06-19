@@ -43,9 +43,7 @@ local BINDS = {
 
     {"XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous")},
     {"XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause")},
-    {"XF86AudioNext", hl.dsp.exec_cmd("playerctl next")},
-
-    {"Escape", hl.dsp.exec_cmd("")},
+    {"XF86AudioNext", hl.dsp.exec_cmd("playerctl next")},s
 }
 
 for _, bind in ipairs(BINDS) do
