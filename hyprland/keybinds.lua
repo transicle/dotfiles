@@ -27,12 +27,9 @@ local BINDS = {
     {MAIN_MOD .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" })},
     {MAIN_MOD .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" })},
 
-    -- Mousejh
+    -- Mouse
     {MAIN_MOD .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true }},
     {MAIN_MOD .. " + mouse:273", hl.dsp.window.resize(), { mouse = true }},
-
-    -- Macros
-    {MAIN_MOD .. " + K",         hl.dsp.submap("macros")},
 }
 
 for _, bind in ipairs(BINDS) do
@@ -46,8 +43,3 @@ for i = 1, 10 do
     hl.bind(MAIN_MOD .. " + " .. key,         hl.dsp.focus({ workspace = i }))
     hl.bind(MAIN_MOD .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
-
-hl.define_submap("macros", function()
-    hl.bind("1",      hl.dsp.exec_cmd('wtype -d 20 "Hello"'))
-    hl.bind("escape", hl.dsp.submap("reset"))
-end)
