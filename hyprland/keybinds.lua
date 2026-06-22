@@ -12,7 +12,6 @@ local BINDS = {
 
     -- Window
     {MAIN_MOD .. " + C",         hl.dsp.window.close()},
-    {MAIN_MOD .. " + SHIFT + X", hl.dsp.window.close()},
     {MAIN_MOD .. " + F",         hl.dsp.window.float({ action = "toggle" })},
     {MAIN_MOD .. " + V",         hl.dsp.window.fullscreen()},
 
