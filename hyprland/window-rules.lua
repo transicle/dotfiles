@@ -1,7 +1,6 @@
 hl.window_rule({
     name  = "windowrule-1",
     match = { class = "^(vesktop|equibop|discord)$" },
-    fullscreen = false,
 })
 
 hl.window_rule({
@@ -14,7 +13,8 @@ hl.window_rule({
     name  = "windowrule-3",
     match = { class = "^(kitty)$" },
     opacity = "0.75 0.75",
-    float = true
+    float = true,
+    size  = { 1200, 1200 },
 })
 
 hl.window_rule({
@@ -34,5 +34,5 @@ hl.window_rule({
     match = { class = "^(org\\.kde\\.dolphin)$" },
     opacity = "0.75 0.75",
     float   = true,
-    size    = { 1600, 900 },
+    size    = { 1200, 1200 },
 })
