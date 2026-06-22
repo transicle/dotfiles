@@ -1,10 +1,6 @@
 #!/bin/bash
 set -e
 
-if ! command -v git &>/dev/null; then
-    sudo pacman -S --noconfirm git
-fi
-
 HYPRPAPER="$HOME/.config/hyprpaper"
 
 TMPDIR=$(mktemp -d)

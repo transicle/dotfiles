@@ -4,7 +4,6 @@ local SYSTEMCTL_ENV  = "systemctl --user import-environment WAYLAND_DISPLAY XDG_
 local POLKIT         = "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 local SWAYNC         = "swaync"
 local SWAYNC_MONITOR = "swaync-client --change-noti-monitor HDMI-A-1"
-local WAYBAR         = "waybar"
 local ULAUNCHER      = "ulauncher --hide-window --no-window-shadow"
 local MOUNT_GDRIVE   = "~/.scripts/mount_gdrive.sh"
 local KWALLET        = "/usr/lib/pam_kwallet_init"
@@ -23,7 +22,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd(POLKIT)
     hl.exec_cmd(SWAYNC)
     hl.exec_cmd(SWAYNC_MONITOR)
-    hl.exec_cmd(WAYBAR)
     hl.exec_cmd(ULAUNCHER)
     hl.exec_cmd(POLKIT)
     hl.exec_cmd(MOUNT_GDRIVE)
