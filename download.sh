@@ -8,3 +8,5 @@ bash <(curl -s "$REPO/scripts/downloaders/download-hypr.sh")
 bash <(curl -s "$REPO/scripts/downloaders/download-hyprpaper.sh")
 bash <(curl -s "$REPO/scripts/downloaders/download-kitty.sh")
 
+hyprctl reload
+

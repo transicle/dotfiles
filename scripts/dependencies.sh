@@ -33,10 +33,10 @@ FLATPAK_DEPS=(
     org.equicord.equibop
 )
 
-sudo pacman -S --needed --noconfirm "${PACMAN_DEPS[@]}"
+sudo pacman -S --needed --noconfirm "${PACMAN_DEPS[@]}" 2>/dev/null
 
 if ! command -v flatpak &>/dev/null; then
-    sudo pacman -S --needed --noconfirm flatpak
+    sudo pacman -S --needed --noconfirm flatpak 2>/dev/null
 fi
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
