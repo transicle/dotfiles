@@ -14,7 +14,7 @@ hl.window_rule({
     match = { class = "^(kitty)$" },
     opacity = "0.75 0.75",
     float = true,
-    size  = { 1200, 1200 },
+    size  = { 800, 800 },
 })
 
 hl.window_rule({
@@ -34,5 +34,5 @@ hl.window_rule({
     match = { class = "^(org\\.kde\\.dolphin)$" },
     opacity = "0.75 0.75",
     float   = true,
-    size    = { 1200, 1200 },
+    size    = { 1200, 800 },
 })
