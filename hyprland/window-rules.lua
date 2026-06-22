@@ -1,6 +1,6 @@
 hl.window_rule({
     name  = "windowrule-float-size",
-    match = { floating = true },
+    match = { float = true },
     size  = { 1200, 800 },
 })
 
