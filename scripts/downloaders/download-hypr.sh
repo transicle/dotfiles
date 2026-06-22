@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
-VERSION=$(hyprctl version | grep -oP 'v\K[0-9]+\.[0-9]+' | head -1)
+VERSION=$(hyprctl version 2>/dev/null | grep -oP 'v\K[0-9]+\.[0-9]+' | head -1)
 MAJOR=$(echo "$VERSION" | cut -d. -f1)
 MINOR=$(echo "$VERSION" | cut -d. -f2)
 
-if [[ "$MAJOR" -lt 0 ]] || { [[ "$MAJOR" -eq 0 ]] && [[ "$MINOR" -lt 55 ]]; }; then
+if [[ -n "$VERSION" ]] && { [[ "$MAJOR" -lt 0 ]] || { [[ "$MAJOR" -eq 0 ]] && [[ "$MINOR" -lt 55 ]]; }; }; then
     echo "Hyprland 0.55.x or above is required (found $VERSION)"
     exit 1
 fi
