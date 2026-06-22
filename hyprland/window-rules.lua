@@ -1,4 +1,10 @@
 hl.window_rule({
+    name  = "windowrule-float-size",
+    match = { floating = true },
+    size  = { 1200, 800 },
+})
+
+hl.window_rule({
     name  = "windowrule-1",
     match = { class = "^(vesktop|equibop|discord)$" },
 })
@@ -34,5 +40,4 @@ hl.window_rule({
     match = { class = "^(org\\.kde\\.dolphin)$" },
     opacity = "0.75 0.75",
     float   = true,
-    size    = { 1200, 800 },
 })
