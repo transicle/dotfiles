@@ -1,0 +1,8 @@
+require("monitors")
+require("env")
+require("auto-start")
+require("settings")
+require("animations")
+require("keybinds")
+require("workspace-rules")
+require("window-rules")
