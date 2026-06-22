@@ -10,7 +10,7 @@ hl.config({
         gaps_out    = 8,
         border_size = 1,
         col = {
-            active_border   = "rgba(444444ff)",
+            active_border   = "rgba(222222ff)",
             inactive_border = "rgba(00000000)",
         },
         layout        = "dwindle",
@@ -22,7 +22,10 @@ hl.config({
     decoration = {
         rounding = 8,
         shadow = {
-            enabled = false,
+            enabled  = true,
+            range    = 8,
+            render_power = 2,
+            color    = "rgba(00000030)",
         },
         blur = {
             enabled = true,
