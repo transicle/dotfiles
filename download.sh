@@ -35,6 +35,9 @@ TMPDIR=$(mktemp -d)
 git clone --depth=1 https://github.com/transicle/dotfiles "$TMPDIR/dotfiles"
 mkdir -p "$HYPR"
 cp -r "$TMPDIR/dotfiles/hyprland/." "$HYPR/"
+cp -r "$TMPDIR/dotfiles/hyprpaper/." "$HYPR/"
+chmod +x "$HYPR/wallpaper-cycle.sh"
+mkdir -p "$HOME/.config/Wallpapers"
 rm -rf "$TMPDIR"
 
 echo "Installed to $HYPR"

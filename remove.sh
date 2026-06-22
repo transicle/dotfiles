@@ -23,6 +23,9 @@ if [[ -z "$LATEST" ]]; then
     exit 1
 fi
 
+# Stop the wallpaper cycle script if running
+pkill -f "wallpaper-cycle.sh" 2>/dev/null || true
+
 rm -rf "$HYPR"
 mv "$LATEST" "$HYPR"
 
