@@ -31,18 +31,21 @@ if [[ -d "$HYPR" ]]; then
     mv "$HYPR" "$DEST"
 fi
 
+HYPRPAPER="$HOME/.config/hyprpaper"
+
 TMPDIR=$(mktemp -d)
 git clone --depth=1 https://github.com/transicle/dotfiles "$TMPDIR/dotfiles"
 mkdir -p "$HYPR"
+mkdir -p "$HYPRPAPER"
 cp -r "$TMPDIR/dotfiles/hyprland/." "$HYPR/"
-cp -r "$TMPDIR/dotfiles/hyprpaper/." "$HYPR/"
-chmod +x "$HYPR/wallpaper-cycle.sh"
-chmod +x "$HYPR/watcher.sh"
+cp -r "$TMPDIR/dotfiles/hyprpaper/." "$HYPRPAPER/"
+chmod +x "$HYPRPAPER/wallpaper-cycle.sh"
+chmod +x "$HYPRPAPER/watcher.sh"
 mkdir -p "$HOME/.config/Wallpapers"
 rm -rf "$TMPDIR"
 
-echo "Installed to $HYPR"
+echo "Installed to $HYPR and $HYPRPAPER"
 
 echo "Starting hyprpaper scripts..."
-nohup "$HYPR/wallpaper-cycle.sh" &>/dev/null &
-nohup "$HYPR/watcher.sh" &>/dev/null &
+nohup "$HYPRPAPER/wallpaper-cycle.sh" &>/dev/null &
+nohup "$HYPRPAPER/watcher.sh" &>/dev/null &

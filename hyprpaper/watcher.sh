@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WALLPAPER_DIR="${HOME}/.config/Wallpapers"
-CYCLE_SCRIPT="${HOME}/.config/hypr/wallpaper-cycle.sh"
+CYCLE_SCRIPT="${HOME}/.config/hyprpaper/wallpaper-cycle.sh"
 
 mkdir -p "$WALLPAPER_DIR"
 

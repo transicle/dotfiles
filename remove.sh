@@ -25,8 +25,10 @@ fi
 
 # Stop the wallpaper cycle script if running
 pkill -f "wallpaper-cycle.sh" 2>/dev/null || true
+pkill -f "watcher.sh" 2>/dev/null || true
 
 rm -rf "$HYPR"
+rm -rf "$HOME/.config/hyprpaper"
 mv "$LATEST" "$HYPR"
 
 echo "Restored from $LATEST"
