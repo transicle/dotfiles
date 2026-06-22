@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO="https://raw.githubusercontent.com/transicle/dotfiles/refs/heads/main"
 
-bash "$DIR/scripts/removers/remove-hyprpaper.sh"
-bash "$DIR/scripts/removers/remove-hypr.sh"
-bash "$DIR/scripts/removers/remove-kitty.sh"
+bash <(curl -s "$REPO/scripts/removers/remove-hyprpaper.sh")
+bash <(curl -s "$REPO/scripts/removers/remove-hypr.sh")
+bash <(curl -s "$REPO/scripts/removers/remove-kitty.sh")
 

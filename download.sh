@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO="https://raw.githubusercontent.com/transicle/dotfiles/refs/heads/main"
 
-bash "$DIR/scripts/dependencies.sh"
-bash "$DIR/scripts/downloaders/download-hypr.sh"
-bash "$DIR/scripts/downloaders/download-hyprpaper.sh"
-bash "$DIR/scripts/downloaders/download-kitty.sh"
+bash <(curl -s "$REPO/scripts/dependencies.sh")
+bash <(curl -s "$REPO/scripts/downloaders/download-hypr.sh")
+bash <(curl -s "$REPO/scripts/downloaders/download-hyprpaper.sh")
+bash <(curl -s "$REPO/scripts/downloaders/download-kitty.sh")
 
