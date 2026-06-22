@@ -1,7 +1,7 @@
 # dotfiles
 
 > [!NOTE]
-> You are **required** to have Hyprland version 0.55.x or above to use this config, as it's a Lua-based config. 
+> You are **required** to have Hyprland version `0.55.x` *or above* to use this config, as it's a Lua-based config. 
 
 **Install**
 ```sh
