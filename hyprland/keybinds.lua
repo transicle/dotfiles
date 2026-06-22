@@ -42,6 +42,7 @@ end
 -- Workspaces 1-10
 for i = 1, 10 do
     local key = i % 10
+    
     hl.bind(MAIN_MOD .. " + " .. key,         hl.dsp.focus({ workspace = i }))
     hl.bind(MAIN_MOD .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
