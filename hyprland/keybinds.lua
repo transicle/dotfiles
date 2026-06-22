@@ -27,7 +27,7 @@ local BINDS = {
     {MAIN_MOD .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" })},
     {MAIN_MOD .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" })},
 
-    -- Mouse
+    -- Mousejh
     {MAIN_MOD .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true }},
     {MAIN_MOD .. " + mouse:273", hl.dsp.window.resize(), { mouse = true }},
 
