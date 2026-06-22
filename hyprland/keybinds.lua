@@ -14,9 +14,9 @@ local BINDS = {
     FILE_MANAGER    = {MAIN_MOD .. " + E",             "dolphin"},
     SCREENSHOT      = {MAIN_MOD .. " + SHIFT + S",     'grim -g "$(slurp)" - | wl-copy'},
     APP_LAUNCHER    = {"CTRL + SPACE",                 "~/.scripts/game_safe_app_launcher.sh -- ulauncher-toggle"},
-    BROWSER         = {MAIN_MOD .. " + B",             "zen-browser"},
-    DISCORD         = {MAIN_MOD .. " + D",             "~/.scripts/start_vesktop.sh"},
-    MUSIC           = {MAIN_MOD .. " + M",             "~/Music/YouTube-Music-3.11.0.AppImag"},
+    BROWSER         = {MAIN_MOD .. " + B",             "flatpak run app.zen_browser.zen"},
+    DISCORD         = {MAIN_MOD .. " + D",             "flatpak run org.equicord.equibop"},
+    MUSIC           = {MAIN_MOD .. " + M",             "~/Music/YouTube-Music-3.11.0.AppImage"},
 }
 
 for _, bind in pairs(BINDS) do
