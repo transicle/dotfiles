@@ -37,7 +37,12 @@ mkdir -p "$HYPR"
 cp -r "$TMPDIR/dotfiles/hyprland/." "$HYPR/"
 cp -r "$TMPDIR/dotfiles/hyprpaper/." "$HYPR/"
 chmod +x "$HYPR/wallpaper-cycle.sh"
+chmod +x "$HYPR/watcher.sh"
 mkdir -p "$HOME/.config/Wallpapers"
 rm -rf "$TMPDIR"
 
 echo "Installed to $HYPR"
+
+echo "Starting hyprpaper scripts..."
+nohup "$HYPR/wallpaper-cycle.sh" &>/dev/null &
+nohup "$HYPR/watcher.sh" &>/dev/null &
