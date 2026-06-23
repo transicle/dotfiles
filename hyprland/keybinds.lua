@@ -2,24 +2,26 @@ local MAIN_MOD = "SUPER"
 
 local BINDS = {
     -- Apps
-    {MAIN_MOD .. " + Q",         hl.dsp.exec_cmd("kitty")},
-    {MAIN_MOD .. " + E",         hl.dsp.exec_cmd("dolphin")},
-    {MAIN_MOD .. " + B",         hl.dsp.exec_cmd("flatpak run app.zen_browser.zen")},
-    {MAIN_MOD .. " + D",         hl.dsp.exec_cmd("flatpak run org.equicord.equibop")},
-    {MAIN_MOD .. " + M",         hl.dsp.exec_cmd("~/Music/YouTube-Music-3.11.0.AppImage")},
-    {MAIN_MOD .. " + L",         hl.dsp.exec_cmd("ulauncher --hide-window --no-window-shadow")},
-    {MAIN_MOD .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy')},
+    {MAIN_MOD .. " + Q",          hl.dsp.exec_cmd("kitty")},
+    {MAIN_MOD .. " + E",          hl.dsp.exec_cmd("dolphin")},
+    {MAIN_MOD .. " + B",          hl.dsp.exec_cmd("flatpak run app.zen_browser.zen")},
+    {MAIN_MOD .. " + D",          hl.dsp.exec_cmd("flatpak run org.equicord.equibop")},
+    {MAIN_MOD .. " + M",          hl.dsp.exec_cmd("~/Music/YouTube-Music-3.11.0.AppImage")},
+    {MAIN_MOD .. " + L",          hl.dsp.exec_cmd("ulauncher --hide-window --no-window-shadow")},
+    {MAIN_MOD .. " + SHIFT + S",  hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy')},
 
     -- Window
-    {MAIN_MOD .. " + C",         hl.dsp.window.close()},
-    {MAIN_MOD .. " + F",         hl.dsp.window.float({ action = "toggle" })},
-    {MAIN_MOD .. " + V",         hl.dsp.window.fullscreen()},
+    {MAIN_MOD .. " + C",          hl.dsp.window.close()},
+    {MAIN_MOD .. " + F",          hl.dsp.window.float({ action = "toggle" })},
+    {MAIN_MOD .. " + V",          hl.dsp.window.fullscreen()},
+    { "ALT + TAB",                hl.dsp.window.cycle({ direction = "next" }) },
+    { "ALT + SHIFT + TAB",        hl.dsp.window.cycle({ direction = "prev" }) },
 
     -- Focus
-    {MAIN_MOD .. " + left",      hl.dsp.focus({ direction = "left"  })},
-    {MAIN_MOD .. " + right",     hl.dsp.focus({ direction = "right" })},
-    {MAIN_MOD .. " + up",        hl.dsp.focus({ direction = "up"    })},
-    {MAIN_MOD .. " + down",      hl.dsp.focus({ direction = "down"  })},
+    {MAIN_MOD .. " + left",       hl.dsp.focus({ direction = "left"  })},
+    {MAIN_MOD .. " + right",      hl.dsp.focus({ direction = "right" })},
+    {MAIN_MOD .. " + up",         hl.dsp.focus({ direction = "up"    })},
+    {MAIN_MOD .. " + down",       hl.dsp.focus({ direction = "down"  })},
 
     -- Workspaces
     {MAIN_MOD .. " + Period",     hl.dsp.focus({ workspace = 100 })},
@@ -27,8 +29,8 @@ local BINDS = {
     {MAIN_MOD .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" })},
 
     -- Mouse
-    {MAIN_MOD .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true }},
-    {MAIN_MOD .. " + mouse:273", hl.dsp.window.resize(), { mouse = true }},
+    {MAIN_MOD .. " + mouse:272",  hl.dsp.window.drag(),   { mouse = true }},
+    {MAIN_MOD .. " + mouse:273",  hl.dsp.window.resize(), { mouse = true }},
 }
 
 for _, bind in ipairs(BINDS) do
