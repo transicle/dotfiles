@@ -6,7 +6,6 @@ LATEST=""
 LATEST_N=-1
 
 pkill -f "wallpaper-cycle.sh" 2>/dev/null || true
-pkill -f "watcher.sh" 2>/dev/null || true
 
 if [[ -d "$HOME/.config/hyprpaper.old" ]]; then
     LATEST="$HOME/.config/hyprpaper.old"

@@ -13,7 +13,6 @@ local EASYEFFECTS    = "easyeffects --hide-window"
 local XRANDR_PRIMARY = "xrandr --output HDMI-A-1 --primary"
 local WALLPAPER       = "hyprpaper"
 local WALLPAPER_CYCLE = "~/.config/hyprpaper/wallpaper-cycle.sh"
-local WALLPAPER_WATCH = "~/.config/hyprpaper/watcher.sh"
 
 hl.on("hyprland.start", function()
     hl.exec_cmd(XDG_PORTAL)
@@ -31,7 +30,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd(EASYEFFECTS)
     hl.exec_cmd(XRANDR_PRIMARY)
     hl.exec_cmd(WALLPAPER_CYCLE)
-    hl.exec_cmd(WALLPAPER_WATCH)
 end)
 
 hl.exec_cmd(WALLPAPER)
