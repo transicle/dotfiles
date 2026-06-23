@@ -19,4 +19,4 @@ hyprctl hyprpaper preload "$WALLPAPER"
 
 while IFS= read -r monitor; do
     hyprctl hyprpaper wallpaper "$monitor,$WALLPAPER"
-done < <(hyprctl monitors -j | grep -oP '"name":\s*"\K[^"]+')
+done < <(hyprctl monitors -j | jq -r '.[].name')
