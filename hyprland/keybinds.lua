@@ -14,8 +14,6 @@ local BINDS = {
     {MAIN_MOD .. " + C",          hl.dsp.window.close()},
     {MAIN_MOD .. " + F",          hl.dsp.window.float({ action = "toggle" })},
     {MAIN_MOD .. " + V",          hl.dsp.window.fullscreen()},
-    { "ALT + TAB",                hl.dsp.window.cycle({ direction = "next" }) },
-    { "ALT + SHIFT + TAB",        hl.dsp.window.cycle({ direction = "prev" }) },
 
     -- Focus
     {MAIN_MOD .. " + left",       hl.dsp.focus({ direction = "left"  })},
