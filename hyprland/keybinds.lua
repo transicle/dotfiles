@@ -7,7 +7,7 @@ local BINDS = {
     {MAIN_MOD .. " + B",         hl.dsp.exec_cmd("flatpak run app.zen_browser.zen")},
     {MAIN_MOD .. " + D",         hl.dsp.exec_cmd("flatpak run org.equicord.equibop")},
     {MAIN_MOD .. " + M",         hl.dsp.exec_cmd("~/Music/YouTube-Music-3.11.0.AppImage")},
-    {MAIN_MOD,                   hl.dsp.exec_cmd("ulauncher --hide-window --no-window-shadow")},
+    {MAIN_MOD .. " + L",         hl.dsp.exec_cmd("ulauncher --hide-window --no-window-shadow")},
     {MAIN_MOD .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy')},
 
     -- Window
