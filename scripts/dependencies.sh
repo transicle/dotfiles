@@ -1,5 +1,10 @@
 #!/bin/bash
-set -e
+set -u
+
+run() {
+    echo "==> $*"
+    "$@" || echo "FAILED: $*"
+}
 
 PACMAN_DEPS=(
     hyprland
@@ -32,33 +37,40 @@ FLATPAK_DEPS=(
     org.equicord.equibop
 )
 
-sudo pacman -S --needed --noconfirm "${PACMAN_DEPS[@]}" 2>/dev/null
+run sudo pacman -S --needed --noconfirm "${PACMAN_DEPS[@]}"
 
-sudo systemctl enable --now snapd.socket
+run sudo systemctl enable --now snapd.socket
 
 if [ ! -e /snap ]; then
-    sudo ln -s /var/lib/snapd/snap /snap
+    run sudo ln -s /var/lib/snapd/snap /snap
 fi
 
-sudo snap install core 2>/dev/null || true
-sudo snap refresh core 2>/dev/null || true
-sudo snap install code --classic 2>/dev/null || true
+run sudo snap install core
+run sudo snap refresh core
+run sudo snap install code --classic
 
-if ! command -v flatpak &>/dev/null; then
-    sudo pacman -S --needed --noconfirm flatpak 2>/dev/null
+if ! command -v flatpak >/dev/null; then
+    run sudo pacman -S --needed --noconfirm flatpak
 fi
 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo 2>/dev/null || true
+run flatpak remote-add --if-not-exists flathub \
+https://flathub.org/repo/flathub.flatpakrepo
 
 for pkg in "${FLATPAK_DEPS[@]}"; do
-    flatpak install --noninteractive flathub "$pkg" 2>/dev/null || true
+    run flatpak install --noninteractive flathub "$pkg"
 done
 
-if ! command -v ulauncher &>/dev/null; then
-    TMPDIR=$(mktemp -d)
-    git clone https://aur.archlinux.org/ulauncher.git "$TMPDIR/ulauncher"
-    cd "$TMPDIR/ulauncher" && makepkg -is --noconfirm
-    cd - && rm -rf "$TMPDIR"
-fi
+run flatpak override --user --filesystem=xdg-download
 
-flatpak override --user --filesystem=xdg-download
+if ! command -v ulauncher >/dev/null; then
+    TMPDIR=$(mktemp -d)
+
+    run git clone https://aur.archlinux.org/ulauncher.git "$TMPDIR/ulauncher"
+
+    cd "$TMPDIR/ulauncher"
+
+    run makepkg -is --noconfirm
+
+    cd -
+    rm -rf "$TMPDIR"
+fi
