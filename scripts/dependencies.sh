@@ -30,6 +30,7 @@ PACMAN_DEPS=(
     jq
     git
     snapd
+    xdg-user-dirs
 )
 
 FLATPAK_DEPS=(
@@ -60,6 +61,7 @@ for pkg in "${FLATPAK_DEPS[@]}"; do
     run flatpak install --noninteractive flathub "$pkg"
 done
 
+mkdir -p ~/Downloads && xdg-user-dirs-update
 run flatpak override --user --filesystem=xdg-download
 
 if ! command -v ulauncher >/dev/null; then
