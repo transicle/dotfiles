@@ -16,7 +16,6 @@ PACMAN_DEPS=(
     pipewire
     pipewire-alsa
     pipewire-pulse
-    pipewire-jack
     wireplumber
     polkit-gnome
     kwallet-pam
