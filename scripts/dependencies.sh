@@ -60,3 +60,5 @@ if ! command -v ulauncher &>/dev/null; then
     cd "$TMPDIR/ulauncher" && makepkg -is --noconfirm
     cd - && rm -rf "$TMPDIR"
 fi
+
+flatpak override --user --filesystem=xdg-download
