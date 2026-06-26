@@ -22,6 +22,8 @@ PACMAN_DEPS=(
     pipewire-alsa
     pipewire-pulse
     wireplumber
+    brightnessctl
+    playerctl
     polkit-gnome
     kwallet-pam
     corectrl

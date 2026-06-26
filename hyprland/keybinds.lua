@@ -29,6 +29,23 @@ local BINDS = {
     -- Mouse
     {MAIN_MOD .. " + mouse:272",  hl.dsp.window.drag(),   { mouse = true }},
     {MAIN_MOD .. " + mouse:273",  hl.dsp.window.resize(), { mouse = true }},
+
+    -- Laptop keys
+    {"XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")},
+    {"XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+")},
+    {"XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")},
+
+    {"XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-")},
+    {"XF86MonBrightnessUp",   hl.dsp.exec_cmd("brightnessctl set 5%+")},
+
+    {"XF86KbdBrightnessDown", hl.dsp.exec_cmd("brightnessctl -d *::kbd_backlight set 5%-")},
+    {"XF86KbdBrightnessUp",   hl.dsp.exec_cmd("brightnessctl -d *::kbd_backlight set 5%+")},
+
+    {"XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous")},
+    {"XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause")},
+    {"XF86AudioNext", hl.dsp.exec_cmd("playerctl next")},
+
+    {"Escape", hl.dsp.exec_cmd("")},
 }
 
 for _, bind in ipairs(BINDS) do
