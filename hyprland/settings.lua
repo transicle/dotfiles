@@ -46,9 +46,26 @@ hl.config({
         kb_rules     = "",
         follow_mouse = 1,
         sensitivity  = 0,
+
         touchpad = {
-            natural_scroll = false,
+            natural_scroll          = true,
+            tap_to_click            = true,
+            tap_and_drag            = true,
+            drag_lock               = false,
+            disable_while_typing    = true,
+            clickfinger_behavior    = true,
+            middle_button_emulation = true,
         },
+    },
+})
+
+hl.config({
+    gestures = {
+        workspace_swipe = true,
+        workspace_swipe_fingers = 3,
+        workspace_swipe_distance = 300,
+        workspace_swipe_invert = false,
+        workspace_swipe_forever = true,
     },
 })
 
