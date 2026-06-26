@@ -60,3 +60,18 @@ bash <(curl -s https://raw.githubusercontent.com/transicle/dotfiles/refs/heads/m
 |---|---|
 | `Super + LMB` | Drag Window |
 | `Super + RMB` | Resize Window |
+
+### Laptop
+
+| Keybind | Action |
+|---|---|
+| `XF86AudioLowerVolume` | Lower your PC audio |
+| `XF86AudioRaiseVolume` | Raise your PC audio |
+| `XF86AudioMute` | Mute your PC audio |
+| `XF86MonBrightnessDown` | Lower your screen brightness |
+| `XF86MonBrightnessUp` | Raise your screen brightness |
+| `XF86KbdBrightnessDown` | Dim your keyboard backlight |
+| `XF86KbdBrightnessUp` | Brighten your keyboard backlight |
+| `XF86AudioPrev` | Goes to the previous media |
+| `XF86AudioPlay` | Pauses or plays the current media |
+| `XF86AudioNext` | Skips the current media |
