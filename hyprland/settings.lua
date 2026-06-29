@@ -29,8 +29,8 @@ hl.config({
             size              = 8,        -- increase from 4
             passes            = 3,        -- fine as-is
             noise             = 0.02,
-            contrast          = 0.9,
-            brightness        = 0.85,
+            contrast          = 1.1,
+            brightness        = 1.2,
             vibrancy          = 0.15,     -- adds that color-tinted glass feel
             vibrancy_darkness = 0.2,
             new_optimizations = true,
