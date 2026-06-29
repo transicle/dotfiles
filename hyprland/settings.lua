@@ -6,9 +6,9 @@ hl.config({
 
 hl.config({
     general = {
-        gaps_in     = 5,
-        gaps_out    = 8,
-        border_size = 0,
+        gaps_in       = 5,
+        gaps_out      = 8,
+        border_size   = 0,
         layout        = "dwindle",
         allow_tearing = true,
     },
@@ -18,16 +18,24 @@ hl.config({
     decoration = {
         rounding = 8,
         shadow = {
-            enabled  = true,
-            range    = 8,
+            enabled      = true,
+            range        = 8,
             render_power = 2,
-            color    = "rgba(00000030)",
+            color        = "rgba(00000030)",
         },
+        
         blur = {
-            enabled = true,
-            size    = 4,
-            passes  = 3,
-        },
+            enabled           = true,
+            size              = 8,        -- increase from 4
+            passes            = 3,        -- fine as-is
+            noise             = 0.02,
+            contrast          = 0.9,
+            brightness        = 0.85,
+            vibrancy          = 0.15,     -- adds that color-tinted glass feel
+            vibrancy_darkness = 0.2,
+            new_optimizations = true,
+            xray              = false,    -- true = blur ignores layering (different look)
+        }
     },
 })
 
