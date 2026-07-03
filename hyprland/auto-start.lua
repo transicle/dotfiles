@@ -12,7 +12,8 @@ local COPYQ          = "copyq"
 local EASYEFFECTS    = "easyeffects --hide-window"
 local XRANDR_PRIMARY = "xrandr --output HDMI-A-1 --primary"
 local WALLPAPER       = "hyprpaper"
-local WALLPAPER_CYCLE = "~/.config/hyprpaper/wallpaper-cycle.sh"
+local WALLPAPER_CYCLE = "bash ~/.config/hyprpaper/wallpaper-cycle.sh"
+local WALLPAPER_CYCLE = "bash ~/.config/hyprpaper/instant-update.sh"
 
 hl.on("hyprland.start", function()
     hl.exec_cmd(XDG_PORTAL)
