@@ -31,6 +31,7 @@ PACMAN_DEPS=(
     jq
     git
     xdg-user-dirs
+    waybar
 )
 
 AUR_DEPS=(
