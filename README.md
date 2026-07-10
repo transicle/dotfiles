@@ -75,3 +75,9 @@ bash <(curl -s https://raw.githubusercontent.com/transicle/dotfiles/refs/heads/m
 | `XF86AudioPrev` | Goes to the previous media |
 | `XF86AudioPlay` | Pauses or plays the current media |
 | `XF86AudioNext` | Skips the current media |
+
+### Utility
+
+| Keybind | Action |
+|---|---|
+| `Super + Shift + L` | Reboot into BIOS |
