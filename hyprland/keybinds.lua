@@ -43,7 +43,10 @@ local BINDS = {
 
     {"XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous")},
     {"XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause")},
-    {"XF86AudioNext", hl.dsp.exec_cmd("playerctl next")},s
+    {"XF86AudioNext", hl.dsp.exec_cmd("playerctl next")},
+
+    -- Utils
+    {MAIN_MOD .. " + SHIFT + L", hl.dsp.exec_cmd("systemctl reboot --firmware-setup")}
 }
 
 for _, bind in ipairs(BINDS) do
