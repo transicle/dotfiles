@@ -24,7 +24,7 @@ bash <(curl -s https://raw.githubusercontent.com/transicle/dotfiles/refs/heads/m
 | `Super + B` | Open browser (Zen) |
 | `Super + D` | Open Discord (Equibop) |
 | `Super + I` | Open VS Code (Snap Store Edition) |
-| `Ctrl + Space` | Toggle App Launcher (ulauncher) |
+| `Super + L` | Toggle App Launcher (ulauncher) |
 | `Super + Shift + S` | Screenshot Selection (to clipboard) |
 
 ### Window
