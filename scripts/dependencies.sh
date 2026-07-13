@@ -31,6 +31,9 @@ PACMAN_DEPS=(
     jq
     git
     xdg-user-dirs
+    nvim
+    vim
+    neovide
 )
 
 AUR_DEPS=(
