@@ -13,6 +13,13 @@ bash <(curl -s https://raw.githubusercontent.com/transicle/dotfiles/refs/heads/m
 bash <(curl -s https://raw.githubusercontent.com/transicle/dotfiles/refs/heads/main/remove.sh)
 ```
 
+## Todo
+
+- Automatically setup VS Code with my theming, extensions.
+- Automatically setup my preferred file structure for my PC.
+- Automatically setup Flathub's removal of each app's sandbox.
+- Automatically setup ZSH theming, and set ZSH as the preferred shell.
+
 ## Keybinds :3c
 
 ### Apps
