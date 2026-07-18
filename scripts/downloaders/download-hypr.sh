@@ -25,7 +25,7 @@ fi
 TMPDIR=$(mktemp -d)
 git clone --depth=1 https://github.com/transicle/dotfiles "$TMPDIR/dotfiles"
 mkdir -p "$HYPR"
-cp -r "$TMPDIR/dotfiles/hyprland/." "$HYPR/"
+cp -r "$TMPDIR/dotfiles/hypr/." "$HYPR/"
 rm -rf "$TMPDIR"
 
 echo "Installed to $HYPR"

@@ -42,3 +42,10 @@ hl.window_rule({
     opacity = "0.7 0.7",
     float   = true,
 })
+
+hl.layer_rule({
+    name  = "waybar-blur",
+    match = { namespace = "waybar" },
+    blur  = true,
+    ignore_alpha = 0.5,
+})

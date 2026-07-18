@@ -1,0 +1,15 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background: rgba(30, 30, 46, 0.55);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
