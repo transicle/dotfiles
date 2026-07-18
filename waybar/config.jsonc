@@ -6,82 +6,56 @@
     "margin-left": 8,
     "margin-right": 8,
     "spacing": 6,
-    "modules-left": [
-        "hyprland/workspaces"
-    ],
+    "modules-left": [],
     "modules-center": [
-        "clock"
-    ],
-    "modules-right": [
-        "idle_inhibitor",
-        "pulseaudio",
-        "network",
         "battery",
-        "custom/notification",
-        "tray"
+        "clock",
+        "network",
+        "pulseaudio"
     ],
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "format-icons": {
-            "active": "",
-            "default": ""
-        },
-        "persistent-workspaces": {
-            "*": 5
-        }
-    },
     "clock": {
-        "format": "{:%H:%M   %a %d %b}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
+        "tooltip": false,
+        "format": "  {:%I:%M %p} "
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-muted": "  Muted",
+        "format": " {icon} {volume}% ",
+        "format-muted": "  Muted",
+        "tooltip": false,
         "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
             "default": [
-                "",
-                "",
-                ""
+                "",
+                "",
+                ""
             ]
         },
         "on-click": "pavucontrol"
     },
     "network": {
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "  {ipaddr}",
-        "format-disconnected": "⚠  Disconnected",
-        "tooltip-format": "{essid} ({signalStrength}%)"
+        "format-wifi": "  {signalStrength}% ",
+        "format-ethernet": "  {ipaddr} ",
+        "format-disconnected": "  Offline ",
+        "tooltip": false
     },
     "battery": {
-        "format": "{icon}  {capacity}%",
-        "format-charging": "  {capacity}%",
+        "format": " {icon} {capacity}% ",
+        "format-charging": "  {capacity}% ",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "",
+            "",
+            "",
+            "",
+            ""
         ],
+        "tooltip": false,
         "states": {
             "warning": 30,
             "critical": 15
         }
-    },
-    "custom/notification": {
-        "exec": "swaync-client -swb",
-        "return-type": "json",
-        "on-click": "swaync-client -t -sw",
-        "escape": true
-    },
-    "tray": {
-        "spacing": 10
     }
 }

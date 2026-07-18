@@ -8,50 +8,22 @@ window#waybar {
     background: transparent;
 }
 
-#workspaces,
-#clock,
-#idle_inhibitor,
-#pulseaudio,
-#network,
-#battery,
-#custom-notification,
-#tray {
+#waybar > box > box.modules-left > *,
+#waybar > box > box.modules-center > *,
+#waybar > box > box.modules-right > * {
     background: rgba(30, 30, 46, 0.60);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     margin: 0 2px;
     padding: 0 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-#workspaces {
-    padding: 0 6px;
-}
-
-#workspaces button {
-    padding: 0 6px;
-    border-radius: 6px;
-    color: rgba(255, 255, 255, 0.5);
-}
-
-#workspaces button.active {
-    background: rgba(255, 255, 255, 0.12);
-    color: #ffffff;
-}
-
-#workspaces button:hover {
-    background: rgba(255, 255, 255, 0.08);
-}
-
-#clock {
-    font-weight: 600;
-    padding: 0 14px;
-}
-
-#idle_inhibitor,
 #pulseaudio,
 #network,
-#battery {
-    color: rgba(255, 255, 255, 0.85);
+#battery,
+#clock {
+    color: #ffffff;
+    font-weight: 600;
 }
 
 #battery.warning {
@@ -60,20 +32,4 @@ window#waybar {
 
 #battery.critical {
     color: #f38ba8;
-}
-
-#custom-notification {
-    padding: 0 12px;
-}
-
-#tray {
-    padding: 0 8px;
-}
-
-#tray > .passive {
-    opacity: 0.6;
-}
-
-#tray > .needs-attention {
-    background: rgba(243, 139, 168, 0.3);
 }
