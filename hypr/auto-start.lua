@@ -14,6 +14,7 @@ local XRANDR_PRIMARY     = "xrandr --output HDMI-A-1 --primary"
 local WALLPAPER          = "hyprpaper"
 local WALLPAPER_CYCLE    = "bash ~/.config/hyprpaper/wallpaper-cycle.sh"
 local WALLPAPER_INSTANT  = "bash ~/.config/hyprpaper/instant-update.sh"
+local WAYBAR             = "waybar"
 
 local function exec(name, cmd)
     local ok, err = pcall(hl.exec_cmd, cmd)
@@ -39,4 +40,5 @@ hl.on("hyprland.start", function()
     exec("WALLPAPER", WALLPAPER)
     exec("WALLPAPER_CYCLE", WALLPAPER_CYCLE)
     exec("WALLPAPER_INSTANT", WALLPAPER_INSTANT)
+    exec("WAYBAR", WAYBAR)
 end)
