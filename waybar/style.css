@@ -33,3 +33,35 @@ window#waybar {
 #battery.critical {
     color: #f38ba8;
 }
+
+#workspaces {
+    border-radius: 8px;
+    padding: 0 6px;
+    margin: 0 2px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: #b4befe;
+    font-weight: 600;
+    min-height: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    transition: none;
+}
+
+#workspaces button:hover {
+    color: #b4befe;
+    background: transparent;
+    transition: none;
+    box-shadow: none;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background: transparent;
+    border-bottom: 2px solid #b4befe;
+    border-radius: 0 0 4px 4px;
+}
