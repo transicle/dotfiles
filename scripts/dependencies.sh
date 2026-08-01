@@ -7,6 +7,7 @@ run() {
 }
 
 PACMAN_DEPS=(
+    waybar
     hyprland
     hyprpaper
     xdg-desktop-portal-hyprland
@@ -37,6 +38,7 @@ PACMAN_DEPS=(
     vim
     zsh
     helix
+    fastfetch
 )
 
 AUR_DEPS=(
