@@ -13,6 +13,7 @@ PACMAN_DEPS=(
     xdg-desktop-portal-hyprland
     kitty
     dolphin
+    github-cli
     swaync
     copyq
     grim
