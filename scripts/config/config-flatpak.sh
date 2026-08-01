@@ -6,7 +6,6 @@ run() {
     "$@" || echo "FAILED: $*"
 }
 
-run flatpak override --user --filesystem=host
 run flatpak override --user --share=network
 run flatpak override --user --socket=system-bus
 run flatpak override --user --socket=session-bus
