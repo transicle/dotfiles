@@ -15,10 +15,8 @@ bash <(curl -s https://raw.githubusercontent.com/transicle/dotfiles/refs/heads/m
 
 ## Todo
 
-- Automatically setup VS Code with my theming, extensions.
-- Automatically setup my preferred file structure for my PC.
-- Automatically setup Flathub's removal of each app's sandbox.
-- Automatically setup ZSH theming, and set ZSH as the preferred shell.
+- Automatically setup Helix editor (Vim alternative)
+- Automatically setup Zen browser
 
 ## Keybinds :3c
 

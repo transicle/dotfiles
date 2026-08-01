@@ -1,4 +1,4 @@
-hl.monitor({
+hl.monitor({ -- For laptops, if this acts weird with PCs, remove this monitor.
     output = "Unknown-1",
     mode = "preferred",
     position = "auto",
