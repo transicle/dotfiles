@@ -46,6 +46,7 @@ local BINDS = {
     {"XF86AudioNext", hl.dsp.exec_cmd("playerctl next")},
 
     -- Utils
+    {MAIN_MOD .. " + SHIFT + K", hl.dsp.exec_cmd("systemctl reboot")},
     {MAIN_MOD .. " + SHIFT + L", hl.dsp.exec_cmd("systemctl reboot --firmware-setup")}
 }
 

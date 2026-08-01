@@ -85,4 +85,5 @@ bash <(curl -s https://raw.githubusercontent.com/transicle/dotfiles/refs/heads/m
 
 | Keybind | Action |
 |---|---|
+| `Super + Shift + K` | Reboot |
 | `Super + Shift + L` | Reboot into BIOS |
