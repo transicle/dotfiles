@@ -1,0 +1,32 @@
+theme = "carbon"
+
+[editor]
+line-number = "relative"
+cursorline = true
+color-modes = true
+bufferline = "multiple"
+auto-format = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+center = ["version-control"]
+right = ["diagnostics", "position", "file-encoding", "file-type"]
+
+[keys.normal]
+"C-s" = ":w"
+"C-q" = ":q"
