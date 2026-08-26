@@ -15,7 +15,6 @@ bash <(curl -s https://raw.githubusercontent.com/transicle/dotfiles/refs/heads/m
 
 ## Todo
 
-- Automatically setup Helix editor (Vim alternative)
 - Automatically setup Zen browser
 
 ## Keybinds :3c
