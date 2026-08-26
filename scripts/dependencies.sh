@@ -41,11 +41,19 @@ PACMAN_DEPS=(
     zsh
     helix
     fastfetch
+    pyright
+    clang
+    lua-language-server
+    rust-analyzer
+    rustup
+    nodejs
+    npm
 )
 
 AUR_DEPS=(
     snapd
     ulauncher
+    typescript-language-server
 )
 
 FLATPAK_DEPS=(
@@ -55,13 +63,14 @@ FLATPAK_DEPS=(
 
 run sudo pacman -S --needed --noconfirm "${PACMAN_DEPS[@]}"
 
+run npm install -g typescript typescript-language-server
+
 ZSH_PATH="$(command -v zsh)"
 
 if [[ -n "$ZSH_PATH" ]]; then
     if ! grep -qx "$ZSH_PATH" /etc/shells; then
         echo "$ZSH_PATH" | sudo tee -a /etc/shells >/dev/null
     fi
-
     if [[ "$SHELL" != "$ZSH_PATH" ]]; then
         run chsh -s "$ZSH_PATH"
     else
@@ -72,6 +81,7 @@ else
 fi
 
 AUR_HELPER=""
+
 if command -v yay >/dev/null; then
     AUR_HELPER="yay"
 elif command -v paru >/dev/null; then
@@ -79,12 +89,10 @@ elif command -v paru >/dev/null; then
 else
     echo "==> No AUR helper found, bootstrapping yay"
     run sudo pacman -S --needed --noconfirm base-devel
-
     TMPDIR=$(mktemp -d)
     run git clone https://aur.archlinux.org/yay.git "$TMPDIR/yay"
     (cd "$TMPDIR/yay" && run makepkg -si --noconfirm)
     rm -rf "$TMPDIR"
-
     if command -v yay >/dev/null; then
         AUR_HELPER="yay"
     fi
@@ -92,18 +100,14 @@ fi
 
 aur_install() {
     local pkg="$1"
-
     if [ -n "$AUR_HELPER" ]; then
         run "$AUR_HELPER" -S --needed --noconfirm "$pkg"
     else
         echo "==> No AUR helper available, building $pkg manually"
-
         local tmpdir
         tmpdir=$(mktemp -d)
-
         run git clone "https://aur.archlinux.org/$pkg.git" "$tmpdir/$pkg"
         (cd "$tmpdir/$pkg" && run makepkg -si --noconfirm)
-
         rm -rf "$tmpdir"
     fi
 }
@@ -131,7 +135,7 @@ if ! command -v flatpak >/dev/null; then
 fi
 
 run flatpak remote-add --if-not-exists flathub \
-https://flathub.org/repo/flathub.flatpakrepo
+    https://flathub.org/repo/flathub.flatpakrepo
 
 for pkg in "${FLATPAK_DEPS[@]}"; do
     run flatpak install --noninteractive flathub "$pkg"
@@ -139,7 +143,6 @@ done
 
 mkdir -p ~/Downloads
 xdg-user-dirs-update
-
 run flatpak override --user --filesystem=xdg-download
 
 echo "==> Setup complete"
