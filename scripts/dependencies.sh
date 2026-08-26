@@ -20,6 +20,7 @@ PACMAN_DEPS=(
     slurp
     inotify-tools
     easyeffects
+    zellij
     ttf-jetbrains-mono-nerd
     pipewire
     pipewire-alsa
