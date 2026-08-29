@@ -7,7 +7,6 @@ run() {
 }
 
 PACMAN_DEPS=(
-    waybar
     hyprland
     hyprpaper
     xdg-desktop-portal-hyprland
@@ -25,6 +24,7 @@ PACMAN_DEPS=(
     pipewire
     pipewire-alsa
     pipewire-pulse
+    waybar
     wireplumber
     brightnessctl
     playerctl
