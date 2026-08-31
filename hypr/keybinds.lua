@@ -13,7 +13,11 @@ local BINDS = {
     -- Window
     {MAIN_MOD .. " + C",          hl.dsp.window.close()},
     {MAIN_MOD .. " + F",          hl.dsp.window.float({ action = "toggle" })},
-    {MAIN_MOD .. " + V",          hl.dsp.window.fullscreen()},
+    {MAIN_MOD .. " + V",          hl.dsp.window.fullscreen()},    
+    {MAIN_MOD .. " + tab",        function()
+        hl.dispatch(hl.dsp.focus({ last = true }))
+        hl.dispatch(hl.dsp.window.alter_zorder({ mode = "top" }))
+    end},
 
     -- Focus
     {MAIN_MOD .. " + left",       hl.dsp.focus({ direction = "left"  })},
