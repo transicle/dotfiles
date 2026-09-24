@@ -57,7 +57,6 @@ AUR_DEPS=(
 )
 
 FLATPAK_DEPS=(
-    app.zen_browser.zen
     org.equicord.equibop
 )
 
@@ -140,6 +139,9 @@ run flatpak remote-add --if-not-exists flathub \
 for pkg in "${FLATPAK_DEPS[@]}"; do
     run flatpak install --noninteractive flathub "$pkg"
 done
+
+echo "==> Installing Zen Browser"
+curl -fsSL https://github.com/zen-browser/updates-server/raw/refs/heads/main/install.sh | sh
 
 mkdir -p ~/Downloads
 xdg-user-dirs-update
