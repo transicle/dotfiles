@@ -34,6 +34,7 @@ hl.window_rule({
     name  = "windowrule-4",
     match = { class = "^(zen)$" },
     opacity = "0.7 0.7",
+    size  = { 1200, 800 },
 })
 
 hl.window_rule({
