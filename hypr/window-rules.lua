@@ -14,7 +14,7 @@ hl.window_rule({
     match = { class = "^(zen)$" },
     opacity = "0.7 0.7",
     float = true,
-    size = { 1200, 800 },
+    size = { 1400, 900 },
     center = true,
 })
 
@@ -23,6 +23,15 @@ hl.window_rule({
     match = { class = "^(org\\.kde\\.dolphin)$" },
     opacity = "0.7 0.7",
     float   = true,
+    center = true,
+})
+
+hl.window_rule({
+    name  = "windowrule-vscode",
+    match = { class = "^(code)$" },
+    opacity = "0.7 0.7",
+    float   = true,
+    size = { 1200, 800 },
     center = true,
 })
 
@@ -37,12 +46,6 @@ hl.window_rule({
 hl.window_rule({
     name  = "windowrule-2",
     match = { class = "^(ulauncher)$" },
-    opacity = "0.7 0.7",
-})
-
-hl.window_rule({
-    name  = "windowrule-vscode",
-    match = { class = "^(code)$" },
     opacity = "0.7 0.7",
 })
 
