@@ -5,7 +5,7 @@ local BINDS = {
     {MAIN_MOD .. " + Q",          hl.dsp.exec_cmd("kitty")},
     {MAIN_MOD .. " + E",          hl.dsp.exec_cmd("dolphin")},
     {MAIN_MOD .. " + B",          hl.dsp.exec_cmd("~/.tarball-installations/zen/zen")},
-    {MAIN_MOD .. " + D",          hl.dsp.exec_cmd("rm -rf /run/user/1000/discord-ipc-0; flatpak run org.equicord.equibop")},
+    {MAIN_MOD .. " + D",          hl.dsp.exec_cmd("flatpak run org.equicord.equibop")},
     {MAIN_MOD .. " + I",          hl.dsp.exec_cmd("code")},
     {MAIN_MOD .. " + L",          hl.dsp.exec_cmd("ulauncher-toggle --hide-window --no-window-shadow")},
     {MAIN_MOD .. " + SHIFT + S",  hl.dsp.exec_cmd('grim -g "$(slurp)" - | tee ~/Pictures/screenshot-$(date +%s).png | wl-copy')},
