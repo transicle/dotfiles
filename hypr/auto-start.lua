@@ -16,8 +16,11 @@ local WALLPAPER_CYCLE    = "bash ~/.config/hyprpaper/wallpaper-cycle.sh"
 local WALLPAPER_INSTANT  = "bash ~/.config/hyprpaper/instant-update.sh"
 local WAYBAR             = "waybar"
 
-local function exec(name, cmd)
-    local ok, err = pcall(hl.exec_cmd, cmd)
+local DISCORD = "org.equicord.equibop"
+local BROWSER = "~/.tarball-installation/zen/zen"
+
+local function exec(name, cmd, rules)
+    local ok, err = pcall(hl.exec_cmd, cmd, rules)
     if not ok then
         hl.log_error(("[autostart] failed to run %s (%s): %s"):format(name, cmd, err))
     end
@@ -41,4 +44,9 @@ hl.on("hyprland.start", function()
     exec("WALLPAPER_CYCLE", WALLPAPER_CYCLE)
     exec("WALLPAPER_INSTANT", WALLPAPER_INSTANT)
     exec("WAYBAR", WAYBAR)
+
+    -- Optional Apps
+
+    exec("DISCORD", "org.equicord.equibop", { workspace = "2" })
+    exec("BROWSER", "~/.tarball-installation/zen/zen", { workspace = "1" })
 end)
