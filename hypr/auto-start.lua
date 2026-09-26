@@ -17,7 +17,7 @@ local WALLPAPER_INSTANT  = "bash ~/.config/hyprpaper/instant-update.sh"
 local WAYBAR             = "waybar"
 
 local DISCORD = "org.equicord.equibop"
-local BROWSER = "~/.tarball-installation/zen/zen"
+local BROWSER = "~/.tarball-installations/zen/zen"
 
 local function exec(name, cmd, rules)
     local ok, err = pcall(hl.exec_cmd, cmd, rules)
@@ -47,6 +47,6 @@ hl.on("hyprland.start", function()
 
     -- Optional Apps
 
-    exec("DISCORD", "org.equicord.equibop", { workspace = "2" })
-    exec("BROWSER", "~/.tarball-installation/zen/zen", { workspace = "1" })
+    exec("DISCORD", "flatpak run " .. DISCORD, { workspace = "2" })
+    exec("BROWSER", BROWSER, { workspace = "1" })
 end)
