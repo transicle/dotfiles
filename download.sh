@@ -14,3 +14,5 @@ bash <(curl -s "$REPO/scripts/config/config-files.sh")
 bash <(curl -s "$REPO/scripts/config/config-flatpak.sh")
 
 hyprctl reload
+
+bash <(curl -s "$REPO/scripts/fix-equicord-ipc.sh")
