@@ -9,6 +9,7 @@ bash <(curl -s "$REPO/scripts/downloaders/download-hyprpaper.sh")
 bash <(curl -s "$REPO/scripts/downloaders/download-kitty.sh")
 bash <(curl -s "$REPO/scripts/downloaders/download-waybar.sh")
 bash <(curl -s "$REPO/scripts/downloaders/download-helix.sh")
+bash <(curl -s "$REPO/scripts/downloaders/download-zshrc.sh")
 
 bash <(curl -s "$REPO/scripts/config/config-files.sh")
 bash <(curl -s "$REPO/scripts/config/config-flatpak.sh")
