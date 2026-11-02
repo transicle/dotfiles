@@ -8,9 +8,9 @@ window#waybar {
     background: transparent;
 }
 
-#waybar > box > box.modules-left > *,
-#waybar > box > box.modules-center > *,
-#waybar > box > box.modules-right > * {
+#waybar>box>box.modules-left>*,
+#waybar>box>box.modules-center>*,
+#waybar>box>box.modules-right>* {
     background: rgba(30, 30, 46, 0.60);
     border-radius: 8px;
     margin: 0 2px;
@@ -21,7 +21,8 @@ window#waybar {
 #pulseaudio,
 #network,
 #battery,
-#clock {
+#clock,
+#custom-date {
     color: #ffffff;
     font-weight: 600;
 }

@@ -8,12 +8,19 @@
     "spacing": 6,
     "modules-left": [],
     "modules-center": [
+        "custom/date",
         "hyprland/workspaces",
         "battery",
         "clock",
         "network",
         "pulseaudio"
     ],
+    "custom/date": {
+        "exec": "bash \"$HOME/.config/waybar/date.sh\"",
+        "format": " {} ",
+        "interval": 60,
+        "tooltip": false
+    },
     "workspaces": {
         "format": "{icon}",
         "format-icons": {
